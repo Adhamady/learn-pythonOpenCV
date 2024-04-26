@@ -1,23 +1,19 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-
-image = cv2.imread("Images\image1.jpg")
-
-half = cv2.resize(image, (0, 0), fx = 0.1, fy = 0.1)
-bigger = cv2.resize(image, (1050, 1610))
-
-stretch_near = cv2.resize(image, (780, 540), 
-			interpolation = cv2.INTER_LINEAR)
 
 
-Titles =["Original", "Half", "Bigger", "Interpolation Nearest"]
-images =[image, half, bigger, stretch_near]
-count = 4
+img = cv2.imread("Images\Innova.jpg") # Height of the image: 300 pixels , width: 400 pixels
 
-for i in range(count):
-	plt.subplot(2, 2, i + 1)
-	plt.title(Titles[i])
-	plt.imshow(images[i])
+halfSize = cv2.resize(img, (150, 200))
+dobleSize = cv2.resize(img, (600, 800))
 
-plt.show()
+cv2.imshow("original",img)
+cv2.imshow("halfSize", halfSize)
+cv2.imshow("dobleSize",dobleSize)
+
+cv2.waitKey(0)
+
+cv2.destroyAllWindows()
+
+
+
