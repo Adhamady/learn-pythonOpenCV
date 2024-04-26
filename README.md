@@ -1,0 +1,1 @@
+# Guide into OpenCV python
