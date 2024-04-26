@@ -1,18 +1,14 @@
+#import cv2 to using openCv functions
 import cv2
-# To read image from disk, we use
-# cv2.imread function, in below method,
-img = cv2.imread("Images\Innova.jpg", cv2.IMREAD_COLOR)
-# Creating GUI window to display an image on screen
-# first Parameter is windows title (should be in string format)
-# Second Parameter is image array
+
+#create a variable that contains the image matrix using cv2.imread() function which takes the image relative path as a parameter
+img = cv2.imread("Images\Innova.jpg")
+
+#show the image using cv2.imshow() function which takes the window name as a parameter and the image matrix as a parameter
 cv2.imshow("image", img)
-# To hold the window on screen, we use cv2.waitKey method
-# Once it detected the close input, it will release the control
-# To the next line
-# First Parameter is for holding screen for specified milliseconds
-# It should be positive integer. If 0 pass an parameter, then it will
-# hold the screen until user close it.
+
+#wait for any key press
 cv2.waitKey(0)
-# It is for removing/deleting created GUI window from screen
-# and memory
+
+#close the image using cv2.destroyAllWindows() function which takes no parameter
 cv2.destroyAllWindows()
