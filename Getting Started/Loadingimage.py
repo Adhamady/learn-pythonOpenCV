@@ -11,4 +11,4 @@ cv2.imshow("image", img)
 cv2.waitKey(0)
 
 #close the image using cv2.destroyAllWindows() function which takes no parameter
-#cv2.destroyAllWindows()
+cv2.destroyAllWindows()
