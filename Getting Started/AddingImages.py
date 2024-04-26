@@ -1,6 +1,3 @@
-# Python program to illustrate 
-# arithmetic operation of 
-# addition of two images 
 	
 # organizing imports 
 import cv2 
@@ -15,14 +12,17 @@ image2 = cv2.imread('Images\Galaxy.jpg')
 cv2.imshow('Apocalypse', image1) 
 cv2.imshow('Galaxy', image2) 
 
+
+#cv2.add() adds every pixel to the corresponding
+Simpleadd = cv2.add(image1, image2)
 # cv2.addWeighted is applied over the 
 # image inputs with applied parameters 
-moreOfMountian = cv2.addWeighted(image1, 0.9, image2, 0.2, 2) 
-moreOfStars = cv2.addWeighted(image1, 0.2, image2, 0.9, 2) 
-equallyWeighted = cv2.addWeighted(image1, 0.5, image2, 0.5, 2) 
+moreOfimage1 = cv2.addWeighted(image1, 0.8, image2, 0.2, 0) 
+moreOfimage2 = cv2.addWeighted(image1, 0.2, image2, 0.8, 0) 
+equallyWeighted = cv2.addWeighted(image1, 0.5, image2, 0.5, 0) 
 
-# the window showing output image 
-# with the weighted sum 
+# the window showing output images
+cv2.imshow('Simple add', Simpleadd) 
 cv2.imshow('More Of Apocalypse', moreOfMountian) 
 cv2.imshow('More Of Galaxy', moreOfStars) 
 cv2.imshow('Equally weighted', equallyWeighted) 
