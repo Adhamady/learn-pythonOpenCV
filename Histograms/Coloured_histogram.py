@@ -3,28 +3,13 @@ import cv2
 import numpy as np
 
 # read the input color image
-img = cv2.imread('Images\Innova.jpg')
+img = cv2.imread('Images\RGB.png')
 
 # split the Blue, Green and Red color channels
 blue,green,red = cv2.split(img)
 
-
-cv2.imshow('Blue Channel', blue)
-cv2.waitKey(0)
-cv2.imshow('Green Channel', green)
-cv2.waitKey(0)
-cv2.imshow('Red Channel', red)
-
-merged = cv2.merge([blue, green, red])
-cv2.imshow("Merged", merged)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
 # define channel having all zeros
-zeros = np.zeros(img.shape[:2], dtype = "uint8")
+zeros = np.zeros(blue.shape, np.uint8)
 
 # merge zeros to make BGR image
 blueBGR = cv2.merge([blue,zeros,zeros])
