@@ -13,6 +13,8 @@ cv2.imshow('Grayscale', gray_image)
 hsv_image = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
 cv2.imshow('HSV', hsv_image) 
 
+
+normalBack=cv2.cvtColor(img, cv2.COLOR_GRAY2HSV) 
 # Window shown waits for any key pressing event
 cv2.waitKey(0) 
 

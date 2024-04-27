@@ -2,7 +2,7 @@
 import cv2
 
 #create a variable that contains the image matrix using cv2.imread() function which takes the image relative path as a parameter
-img = cv2.imread("Images\Innova.jpg")
+img = cv2.imread("Images\Innova.jpg") 
 
 #show the image using cv2.imshow() function which takes the window name as a parameter and the image matrix as a parameter
 cv2.imshow("image", img)
